@@ -1,3 +1,7 @@
+- Uso básico do docker
+
+ - rodando uma imagem
+
 - Imagem base Alpine
 docker build -t couldworks/alpine-base:3.4 .
 
@@ -41,5 +45,5 @@ Serviços
 do oficial da Orient Technologies no repositório https://github.com/couldworks/orientdb-docker/
  - docker build -t couldworks/orientdb:2.2.6 orientdb-docker/2.2/.
 
-- Subindo container orientdb estando no diretório onde ficarão os diretórios de volumes
+- Subindo container orientdb estando no diretório onde ficarão os volumes
   docker run -d --name orientdb -p 2424:2424 -p 2480:2480 -v $(pwd)/data/orientdb/data:/orientdb/databases  -v $(pwd)/data/orientdb/data:/orientdb/backup -e ORIENTDB_ROOT_PASSWORD=couldworks  orientechnologies/orientdb:2.2.6 /orientdb/server/.sh -Xmx2g
